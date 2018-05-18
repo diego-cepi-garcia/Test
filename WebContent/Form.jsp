@@ -61,7 +61,7 @@
        <div class="form-group col-auto">
      <label for="inputTransactionType">Tipo Transacción</label>
      <select id="inputTransactionType" class="form-control" name="tipo_transaccion" value="Elegir">
-	<option selected>Elegir</option>       
+	<option value="Elegir" disabled>Elegir</option>
        <option>Compra</option>
        <option>Leesing</option>
      </select>

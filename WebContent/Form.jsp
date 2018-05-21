@@ -13,7 +13,7 @@
 </head>
 <body>
 <h3>Alta Vehiculo</h3>
-<form action="resultados.jsp" method="post">
+<form action="s" method="post">
   <div class="form-row">
     <div class="form-group col-auto">
     <label for="inputVehicleType">Tipo Vehiculo</label>

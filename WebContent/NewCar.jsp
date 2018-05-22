@@ -9,16 +9,53 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Form</title>
+<title>NEW CAR</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/signin.css" rel="stylesheet">		
 </head>
 <body>
-<h3>Alta Vehiculo</h3>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="Menu.jsp">FleetControl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+    		<a class="nav-link active" href="NewCar.jsp">Agregar Vehiculo</a>
+  		</li>
+  			<li class="nav-item">
+    		<a class="nav-link active" href="NewDriver.jsp">Agregar Conductor</a>
+		</li>
+  			<li class="nav-item">
+    		<a class="nav-link active" href="NewTicket.jsp">Agregar Multa</a>
+  		</li>
+  			<li class="nav-item">
+    		<a class="nav-link active" href="NewMaintenance.jsp">Agregar Mantenimiento</a>
+  		</li>
+    		<li class="nav-item">
+    		<a class="nav-link active" href="AddKM.jsp">Agregar KM</a>
+  		</li>
+    		<li class="nav-item">
+    		<a class="nav-link active" href="EditCar.jsp">Editar Vehiculo</a>
+  		</li>
+    		<li class="nav-item">
+    		<a class="nav-link active" href="Report.jsp">Reportes</a>
+  		</li>
+          </ul>
+          </div>
+      </nav>
+    </header>
 <form action="s" method="post">
-  <div class="form-row">
-    <div class="form-group col-auto">
-    <label for="inputVehicleType">Tipo Vehiculo</label>
+	<div class="form-row col-auto">
+	<h3>Nuevo Vehiculo</h3>
+	</div>
+  <div class="form-row col-auto">
+  <div class="form-group col-auto">
+      <label for="inputVehicleType">Tipo Vehiculo</label>
     <select id="inputVehicleType" class="form-control" name="tipo_vehiculo">
-      <option selected>Elegir</option>
+      <option selected disabled>Elegir</option>
       <option>Automovil</option>
       <option>4x2</option>
       <option>4x4</option>
@@ -27,7 +64,7 @@
        <div class="form-group col-auto">
       <label for="inputMarca">Marca</label>
       <select id="inputMarca" class="form-control" name="marca">
-        <option selected>Marca</option>
+        <option selected disabled>Marca</option>
         <option>Toyota</option>
         <option>Honda</option>
         <option>Ford</option>
@@ -42,7 +79,7 @@
         <div class="form-group col-auto">
     <label for="inputVehiclefuncion">Funcion Vehiculo</label>
     <select id="inputVehiclefuncion" class="form-control" name="funcion_vehiculo">
-      <option selected>Funcion</option>
+      <option selected disabled>Funcion</option>
       <option>Job</option>
       <option>Job Functional</option>
       <option>Benefit</option>
@@ -57,11 +94,11 @@
     <input type="text" class="form-control" id="inputYear" placeholder="Año" name ="year">
   </div>
   </div>
-    <div class="form-row">
+    <div class="form-row col-auto">
        <div class="form-group col-auto">
      <label for="inputTransactionType">Tipo Transacción</label>
      <select id="inputTransactionType" class="form-control" name="tipo_transaccion" value="Elegir">
-	<option value="Elegir" disabled>Elegir</option>
+	<option value="Elegir" selected disabled>Elegir</option>
        <option>Compra</option>
        <option>Leesing</option>
      </select>
@@ -71,28 +108,36 @@
     <input type="text" class="form-control" id="inputTransactionCost" placeholder="$" name="costo_transaccion">
   </div>
   </div>
-  <div class="form-row">
+  <div class="form-row col-auto">
       <div class="form-group col-auto">
       <label for="inputStatus">Status</label>
       <select id="inputStatus" class="form-control" name="status">
-        <option selected>Estado</option>
+        <option selected disabled>Estado</option>
         <option>Disponible</option>
         <option>En Venta</option>
         <option>En Taller</option>
         <option>No Disponible</option>
       </select>
     </div>
-  </div>
-  
-<!--   <div class="form-group"> -->
-<!--     <div class="form-check"> -->
-<!--       <input class="form-check-input" type="checkbox" id="gridCheck"> -->
-<!--       <label class="form-check-label" for="gridCheck"> -->
-<!--         Check me out -->
-<!--       </label> -->
-<!--     </div> -->
-<!--   </div> -->
-  <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+    <div class="form-row col-auto">
+      <div class="form-group col-auto">
+      <label for="inputCountry">Country</label>
+      <select id="inputCountry" class="form-control" name="country">
+        <option selected disabled>Elige pais</option>
+        <option>Argentina</option>
+        <option>Uruguay</option>
+        <option>Brasil</option>
+        <option>Paraguay</option>
+        <option>Chile</option>
+      </select>
+    </div>
+    </div>
+    <div class="custom-file">
+  <input type="file" class="custom-file-input" id="ContractFile" lang="es" name="contracfile">
+  <label class="custom-file-label" for="customFileLang">Cargar Contrato</label>
+</div>
+  <button type="submit" class="btn btn-primary">Agregar Auto</button>
 </form>
 </body>
 </html>
